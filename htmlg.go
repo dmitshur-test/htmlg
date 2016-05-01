@@ -51,6 +51,9 @@ func RenderNodes(nodes ...*html.Node) (template.HTML, error) {
 
 // Must is a helper that wraps a call to a function returning (template.HTML, error)
 // and panics if the error is non-nil.
+//
+// DEBUG: This is a change to test out if godoc.org picks it up when refreshing.
+//        Doing this to test/verify https://github.com/golang/gddo/issues/404.
 func Must(html template.HTML, err error) template.HTML {
 	if err != nil {
 		panic(err)
